@@ -8,12 +8,17 @@ const { Server } = require("socket.io");
 const {PeerServer} = require('peer');
 
 app.use(cors());
+app.use(express.json()); //middleware
 const io = new Server(server, {
     cors : {
-        origin: "*",
+        origin: 'https://geo-call-main-client.vercel.app',
         methods: ["GET", "POST"],
     },
 });
+
+app.get('/api', (req, res) => {
+    res.send('API is working!');
+  });  
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
