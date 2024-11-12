@@ -28,7 +28,7 @@ export const getAcessToLocalStream = async () => {
 
 export const connectWithPeerServer = () => {
   peer = new Peer(undefined, {
-    host: "localhost",
+    host: "https://geocall-6667.onrender.com",
     port: 9000,
     path: "/peer",
   });

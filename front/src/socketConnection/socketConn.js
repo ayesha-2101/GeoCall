@@ -8,7 +8,7 @@ import { videoRoomsListHandler } from "../store/actions/videoRoomActions";
 import { call, disconnect } from "../realtimeCommunication/webRTCHandler";
 
 let socket = null;
-const ENDPOINT = "http://localhost:3003";
+const ENDPOINT = "https://geocall-6667.onrender.com";
 
 export const connectWithSocketIOServer = () => {
   socket = io(ENDPOINT); //io function responsible for connecting to the given server
